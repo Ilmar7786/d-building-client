@@ -40,6 +40,8 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-use-before-define": "off",
     "no-nested-ternary": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
     "simple-import-sort/imports": [
       "error",
       {
