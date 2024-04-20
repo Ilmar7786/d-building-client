@@ -1,24 +1,27 @@
-import { Button, Theme } from "@mui/material"
-import { makeStyles } from "@mui/styles"
-import { FC, useState } from "react"
-import { Icon } from "@/shared/ui"
+// import { Button, Theme } from "@mui/material"
+// import { makeStyles } from "@mui/styles"
+import { FC } from "react"
+import { Chat } from "@/features/chat"
+import { Header } from "@/features/header"
+// import { Icon } from "@/shared/ui"
+import { Navigation } from "@/features/navigation"
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    paddingTop: theme.spacing(2),
-  },
-  head: {
-    color: theme.palette.primary.dark,
-  },
-}))
+// const useStyles = makeStyles((theme: Theme) => ({
+//   root: {
+//     paddingTop: theme.spacing(2),
+//   },
+//   head: {
+//     color: theme.palette.primary.dark,
+//   },
+// }))
 
 export const MainPage: FC = () => {
-  const [count, setCount] = useState(0)
-  const classes = useStyles()
+  // const [count, setCount] = useState(0)
+  // const classes = useStyles()
 
   return (
     <div>
-      <h2 className={classes.head}>
+      {/* <h2 className={classes.head}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, nisi?
       </h2>
       <Button variant="outlined">Click me</Button>
@@ -36,7 +39,30 @@ export const MainPage: FC = () => {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <p className="read-the-docs">Click on the Vite and React logos to learn more</p> */}
+      <Header text="Чат с банком" />
+      <Chat />
+      <Navigation />
     </div>
   )
 }
+
+// import { FC } from "react"
+// import { Chat } from "@/features/chat"
+// import { MainLayout } from "@/shared/ui/layouts/MainLayout"
+// import styles from "./styles.module.css"
+
+// export const MainPage: FC = () => {
+//   // const [count, setCount] = useState(0)
+//   // const classes = useStyles()
+
+//   return (
+//     <div>
+//       <MainLayout>
+//         <div className={styles.chatBlock}>
+//           <Chat />
+//         </div>
+//       </MainLayout>
+//     </div>
+//   )
+// }

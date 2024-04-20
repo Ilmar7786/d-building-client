@@ -1,9 +1,12 @@
 import { FC } from "react"
+import { useStyles } from "./style"
 
 interface Props {
   text: string
 }
 
 export const Header: FC<Props> = ({ text }) => {
-  return <header className="header"> {text}</header>
+  const classes = useStyles()
+
+  return <header className={classes.header}> {text}</header>
 }
