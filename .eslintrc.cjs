@@ -4,24 +4,24 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true
+    es6: true,
   },
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
     project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname
+    tsconfigRootDir: __dirname,
   },
   settings: {
     react: {
-      version: "detect"
+      version: "detect",
     },
     "import/resolver": {
       node: {
         paths: ["src"],
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
   },
   plugins: ["react-refresh", "simple-import-sort", "import"],
   extends: [
@@ -32,7 +32,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:sonarjs/recommended",
     "plugin:security/recommended-legacy",
-    "plugin:prettier/recommended" // Make sure this is always the last element in the array.
+    "plugin:prettier/recommended", // Make sure this is always the last element in the array.
   ],
   ignorePatterns: ["vite.config.ts"],
   rules: {
@@ -40,11 +40,12 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-use-before-define": "off",
     "no-nested-ternary": "off",
+    "import/prefer-default-export": "off",
     "simple-import-sort/imports": [
       "error",
       {
-        "groups": [["^\\u0000", "^@?\\w", "^[^.]", "^\\."]]
-      }
+        groups: [["^\\u0000", "^@?\\w", "^[^.]", "^\\."]],
+      },
     ],
     "import/extensions": "off",
     "react/prop-types": "off",
@@ -55,12 +56,9 @@ module.exports = {
       "error",
       {
         namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function"
-      }
+        unnamedComponents: "arrow-function",
+      },
     ],
-    "react-refresh/only-export-components": [
-      "warn",
-      { allowConstantExport: true }
-    ]
-  }
-};
+    "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+  },
+}
