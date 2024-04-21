@@ -11,10 +11,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   messagesField: {
     overflowY: "scroll",
+    height: "100%",
   },
   usersMessage: {
     width: "fit-content",
-    paddingLeft: "43%",
+    marginLeft: "auto",
   },
 
   usersMessageText: {
@@ -34,7 +35,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
   botsMessage: {
     width: "fit-content",
-    paddingRight: "43%",
     marginLeft: "0px",
     marginRight: "auto",
   },
@@ -56,6 +56,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: "row",
     gap: "10px",
     alignItems: "flex-end",
+    position: "relative",
   },
   messageInput: {
     flexGrow: "1",

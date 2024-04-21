@@ -48,6 +48,7 @@ module.exports = {
       },
     ],
     "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",

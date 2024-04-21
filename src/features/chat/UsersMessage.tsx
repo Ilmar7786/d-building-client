@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { formatDate } from "@/shared/lib"
 import { useStyles } from "./styles"
 
 interface UserMessageProps {
@@ -11,7 +12,7 @@ export const UsersMessage: FC<UserMessageProps> = ({ text, time }) => {
   return (
     <div className={classes.usersMessage}>
       <p className={classes.usersMessageText}>{text}</p>
-      <span className={classes.usersMessageTime}>{time}</span>
+      <span className={classes.usersMessageTime}>{formatDate(time)}</span>
     </div>
   )
 }
