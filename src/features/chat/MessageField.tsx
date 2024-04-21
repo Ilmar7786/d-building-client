@@ -8,7 +8,7 @@ interface Props {
   messages: ChatData[]
 }
 
-export const MessageField: FC<Props> = ({ messages }) => {
+export const MessageField: FC<Props> = ({ messages = [] }) => {
   const classes = useStyles()
 
   return (

@@ -14,8 +14,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     height: "100%",
   },
   usersMessage: {
-    width: "fit-content",
     marginLeft: "auto",
+    paddingLeft: "43%",
   },
 
   usersMessageText: {
@@ -37,9 +37,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     width: "fit-content",
     marginLeft: "0px",
-    marginRight: "auto",
+    marginRight: "35%",
   },
   botsMessageText: {
+    width: "fit-content",
     color: "black",
     padding: "10px",
     marginLeft: "50px",
