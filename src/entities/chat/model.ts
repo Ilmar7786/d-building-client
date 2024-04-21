@@ -1,6 +1,6 @@
 export interface ChatMessageParams {
   message: string
-  redir: boolean
+  redir: boolean | string
   values?: string | Record<string, string>
 }
 

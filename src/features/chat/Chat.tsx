@@ -43,18 +43,18 @@ export const Chat: FC = () => {
     setChatMessages(prevState => [
       ...prevState,
       {
-        message: res.data.message,
+        message: res.message,
         code,
         type: "",
         time: new Date().toString(),
         id: 1,
         sender: true,
         theme_id: 0,
-        targetedActions: !isCodeString(res.data.values) ? res.data.values : undefined,
+        targetedActions: !isCodeString(res.values) ? res.values : undefined,
       },
     ])
-    if (!isCodeString(res.data.values)) return
-    setCode(res.data.values)
+    if (!isCodeString(res.values)) return
+    setCode(res.values)
   }
 
   useEffect(() => {
