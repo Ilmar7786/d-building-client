@@ -1,10 +1,14 @@
-FROM node:20-alpine as builder
-WORKDIR /web
+FROM node:18-alpine3.17 as build
 
-COPY package.json yarn.lock ./
+WORKDIR /app
+COPY . /app
+
 RUN yarn
-COPY . .
 RUN yarn build
-RUN yarn preview
-EXPOSE 5173
-ENTRYPOINT ["npm", "start"]
+
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install nginx -y
+COPY --from=build /app/dist /var/www/html/
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
