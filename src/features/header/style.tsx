@@ -7,6 +7,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
     padding: "15px",
     fontSize: "16px",
     fontWeight: "400",
-    borderBottom: "1px solid #EEEEEE",
+    borderBottom: "2px solid #EEEEEE",
   },
 }))

@@ -1,17 +1,21 @@
 import { FC } from "react"
-import { Chat } from "@/features/chat"
-import { ChatContextProvider } from "@/features/chat/"
+import { Chat, useChatContext } from "@/features/chat"
 import { Header } from "@/features/header"
 import { Navigation } from "@/features/navigation"
+import { VoiceRecording } from "@/features/voice-recording"
 
 export const MainPage: FC = () => {
+  const { isVoice } = useChatContext()
   return (
-    <div>
-      <ChatContextProvider>
-        <Header text="Чат с банком" />
-        <Chat />
-        <Navigation />
-      </ChatContextProvider>
-    </div>
+    <>
+      <Header text="Чат с банком" />
+      {isVoice && <VoiceRecording />}
+      {!isVoice && (
+        <>
+          <Chat />
+          <Navigation />
+        </>
+      )}
+    </>
   )
 }
