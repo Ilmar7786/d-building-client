@@ -8,7 +8,7 @@ export const sendMessage = async ({
   // todo: заменить на пользователя
   userId = 1,
 }: {
-  message: string
+  message: string | Blob
   code: string
   type: "0" | "1"
   userId?: number
@@ -20,7 +20,11 @@ export const sendMessage = async ({
     data.append("type", type)
     data.append("code", code)
 
-    const res = await api.post<ChatMessageParams>("/api/messages/", data)
+    const res = await api.post<ChatMessageParams>("/api/messages/", data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    })
     return res.data
   } catch {
     return {
