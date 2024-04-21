@@ -34,6 +34,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
 
   botsMessage: {
+    position: "relative",
     width: "fit-content",
     marginLeft: "0px",
     marginRight: "auto",
@@ -41,6 +42,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
   botsMessageText: {
     color: "black",
     padding: "10px",
+    marginLeft: "50px",
     borderRadius: "20px",
     marginBottom: "4px",
     textAlign: "justify",
@@ -48,8 +50,12 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   botsMessageTime: {
     display: "block",
-    marginLeft: "12px",
+    marginLeft: "55px",
     fontSize: "10px",
+  },
+  botAvatar: {
+    position: "absolute",
+    transform: "translateY(-55px)",
   },
   textBar: {
     display: "flex",

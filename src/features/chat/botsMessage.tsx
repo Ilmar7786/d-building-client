@@ -45,6 +45,7 @@ export const BotsMessage: FC<BotsMessageProps> = ({
     <div className={classes.botsMessage}>
       <p className={classes.botsMessageText}>{text}</p>
       <span className={classes.botsMessageTime}>{time}</span>
+      <img className={classes.botAvatar} src="/img/bankAvatar.png" alt="" />
       <Grid container gap={2} marginTop={2}>
         {actions.map(([code, title]) => (
           <Grid item key={code}>
