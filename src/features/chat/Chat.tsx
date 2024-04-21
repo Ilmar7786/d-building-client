@@ -58,7 +58,10 @@ export const Chat: FC = () => {
   }
 
   useEffect(() => {
-    api.get<ChatResponse>("/api/messages").then(res => setChatMessages(res.data.data))
+    api
+      .get<ChatResponse>("/api/messages")
+      .then(res => setChatMessages(res.data.data))
+      .catch(() => setChatMessages([]))
   }, [])
 
   return (
